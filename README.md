@@ -2,7 +2,7 @@
 
 This is a template for future React Native Apps based on [Damit Yarn!](https://github.com/Aldwinny/damit-yarn-mobile-app/)
 
-It uses a set of packages and a predefined directory tree for the ease of organization of source codes.
+This is a template that uses a set of packages and a predefined directory tree for the ease of organization of source codes.
 
 ## Packages
 
