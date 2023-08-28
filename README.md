@@ -1,4 +1,4 @@
-# TEMPLATE: React Native Mobile Application
+# Template: React Native Mobile Application
 
 This is a template for future React Native Apps based on [Damit Yarn!](https://github.com/Aldwinny/damit-yarn-mobile-app/)
 
