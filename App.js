@@ -40,9 +40,11 @@ export default function App() {
     <GestureHandlerRootView className="flex-1">
       <PaperProvider>
         <SafeAreaProvider>
+          {/* <NavigationContainer>*/}
           <Text>
             Insert Your NavigatorContainer and Preferred Navigator here
           </Text>
+          {/*</NavigationContainer> */}
         </SafeAreaProvider>
       </PaperProvider>
     </GestureHandlerRootView>

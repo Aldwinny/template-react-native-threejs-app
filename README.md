@@ -8,7 +8,56 @@ This is a template that uses a set of packages and a predefined directory tree f
 
 There are multiple configuration and installed packaged which may be seen in the <code>package.json</code> and <code>babel.config.js</code>
 
-**To be added..**
+### React Native & Expo Packages
+
+- **react**
+- **react-dom**
+- **react-native**
+- **expo**
+- **expo-image-picker**
+- **expo-sqlite** - For SQLite support
+- **expo-status-bar**
+- **@expo/webpack-config**
+
+### More React Native Packages
+
+- **react-native-collapsible** - For React Native collapsible form inputs.
+- **react-native-country-codes-picker** - For the selection of country codes.
+  **react-native-dotenv** - (Possible Removal for EAS env) For the storage and access of dotenv variables
+  **react-native-element-dropdown** - For React Native dropdown form inputs.
+- **react-native-gesture-handler** - A dependency for other packages.
+- **react-native-paper** - A framework that includes components compliant of Material Design.
+- **react-native-reanimated** - An animation library that is also a dependency for other packages.
+- **react-native-reanimated-carousel** - Introduces animated carousels
+- **react-native-safe-area-context** - A dependency for other packages, and also a usable library for Safe Area
+- **react-native-screens** - A dependency for navigation packages
+- **react-native-svg** - Introduces SVG support for react native
+- **react-native-vector-icons** - A useful icon library
+- **react-native-web** - For running react native application on the web
+
+### Redux & Redux Persist
+
+- **react-redux** - Introduces Redux for React
+- **redux** - Installs the Redux library
+- **redux-persist** - Allows for persistence of Redux-stored data
+- **@reduxjs/toolkit** - More useful redux stuff.
+- **react-native-async-storage/async-storage** - A dependency for redux persist & a useful library for persisting data across multiple application restarts.
+
+### React Navigation
+
+- **@react-navigation/bottom-tabs**
+- **@react-navigation/native**
+- **@react-navigation/native-stack**
+
+### API & Security
+
+- **axios** - Library for sending better API calls
+- **bcrypt** - Encryption, Hashing, and stuff.
+
+### Styling
+
+- **tailwindcss** - Introduces the library for tailwind
+- **nativewind** - Converts tailwind into something that can be used by React Native.
 
 ## Directories
 
