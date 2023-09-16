@@ -23,8 +23,8 @@ There are multiple configuration and installed packaged which may be seen in the
 
 - **react-native-collapsible** - For React Native collapsible form inputs.
 - **react-native-country-codes-picker** - For the selection of country codes.
-  **react-native-dotenv** - (Possible Removal for EAS env) For the storage and access of dotenv variables
-  **react-native-element-dropdown** - For React Native dropdown form inputs.
+- **react-native-dotenv** - (Possible Removal for EAS env) For the storage and access of dotenv variables
+- **react-native-element-dropdown** - For React Native dropdown form inputs.
 - **react-native-gesture-handler** - A dependency for other packages.
 - **react-native-paper** - A framework that includes components compliant of Material Design.
 - **react-native-reanimated** - An animation library that is also a dependency for other packages.
