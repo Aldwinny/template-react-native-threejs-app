@@ -26,6 +26,7 @@ import { Provider as PaperProvider } from "react-native-paper";
  */
 import { Provider as StoreProvider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
+import { Text } from "react-native";
 
 /**
  * This is the first function to be executed.

@@ -28,7 +28,6 @@ There are multiple configuration and installed packaged which may be seen in the
 - **react-native-gesture-handler** - A dependency for other packages.
 - **react-native-paper** - A framework that includes components compliant of Material Design.
 - **react-native-reanimated** - An animation library that is also a dependency for other packages.
-- **react-native-reanimated-carousel** - Introduces animated carousels
 - **react-native-safe-area-context** - A dependency for other packages, and also a usable library for Safe Area
 - **react-native-screens** - A dependency for navigation packages
 - **react-native-svg** - Introduces SVG support for react native
