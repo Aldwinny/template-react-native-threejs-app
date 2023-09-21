@@ -1,6 +1,6 @@
-# Template: React Native Mobile Application
+# Template: React Native + ThreeJS Mobile Application
 
-This is a template for future React Native Apps based on [Damit Yarn!](https://github.com/Aldwinny/damit-yarn-mobile-app/)
+This is a template for future React Native Apps that use ThreeJS for displaying 3D Objects
 
 This is a template that uses a set of packages and a predefined directory tree for the ease of organization of source codes.
 
@@ -17,6 +17,8 @@ There are multiple configuration and installed packaged which may be seen in the
 - **expo-image-picker**
 - **expo-sqlite** - For SQLite support
 - **expo-status-bar**
+- **expo-gl** - Provides a View for rendering to OpenGL ES, which is important for 2D and 3D graphics.
+- **expo-three** - Provides a bridge between Three.js and ExpoGL
 - **@expo/webpack-config**
 
 ### More React Native Packages
@@ -62,10 +64,23 @@ There are multiple configuration and installed packaged which may be seen in the
 
 There is a predefined directory tree for the storage of components, services, and constants which are used throughout the application. The directories are as follows
 
-**To be added..**
+### lib
+
+The <code>lib</code> folder serves as the root folder for your code. This includes screens, services, constants, utilities, and more.
+
+- **components** - Store your reusable React Native custom components here
+- **screens** - Store your screens here, screens are routes for your application.
+- **overlays** - Inside the screens folder is the overlays folder. This includes overlays to be used alongside screens.
+- **services** - Store in here code that contacts APIs as well as your connection to a local SQLite Database.
+- **api** - Inside the services folder is the api folder which includes files that would connect to outside services through API calls.
+- **shared** - Store here your constants and data that you want to use throughout the application.
+- **redux** - Inside the shared folder is the redux folder which includes the Redux slices and stores implemented for state management.
+- **utils** - Store here utilities for formatting data, debugging, and more. This serves as a folder that typically stores convenience functions.
+
+### assets
+
+The <code>assets</code> folder includes all the assets used by the application. This can be freely customized based on the developer's preferences.
 
 ## Configurations
 
 Configurations are information regarding the application including how eas configurations and other dependency configurations. See <code>.gitignore, eas.json,</code> and <code>tailwind.config.js</code>
-
-**To be added..**

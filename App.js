@@ -16,7 +16,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
  * The following import is for the use of React Native Paper components
  * Check https://callstack.github.io/react-native-paper/4.0/getting-started.html
  */
-import { Provider as PaperProvider } from "react-native-paper";
+import { Provider as PaperProvider, TouchableRipple } from "react-native-paper";
 
 /**
  * The following imports are related to Redux and Redux persist for State Management
@@ -26,7 +26,8 @@ import { Provider as PaperProvider } from "react-native-paper";
  */
 import { Provider as StoreProvider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
+import { useState } from "react";
 
 /**
  * This is the first function to be executed.
@@ -37,14 +38,28 @@ import { Text } from "react-native";
 export default function App() {
   global.debug = false;
 
+  // Changes the state of the screen
+  const [color, setColor] = useState("blue");
+  const colorSelection = ["red", "yellow", "blue", "green", "gray", "slate"];
+
   return (
     <GestureHandlerRootView className="flex-1">
       <PaperProvider>
         <SafeAreaProvider>
           {/* <NavigationContainer>*/}
-          <Text>
-            Insert Your NavigatorContainer and Preferred Navigator here
-          </Text>
+          <TouchableRipple
+            className={`flex-1 h-full items-center justify-center bg-${color}-400`}
+            onPress={() => {
+              let random = Math.floor(Math.random() * colorSelection.length);
+              setColor(colorSelection[random]);
+            }}
+          >
+            <Text className="text-center mx-3">
+              Insert Your NavigatorContainer and Preferred Navigator here.
+              Color: {color}
+            </Text>
+          </TouchableRipple>
+
           {/*</NavigationContainer> */}
         </SafeAreaProvider>
       </PaperProvider>
