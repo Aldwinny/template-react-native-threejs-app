@@ -27,7 +27,33 @@ import { Provider as PaperProvider, TouchableRipple } from "react-native-paper";
 import { Provider as StoreProvider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { Text, View } from "react-native";
-import { useState } from "react";
+import { useState, useRef } from "react";
+
+import { Canvas, useFrame } from "@react-three/fiber/native";
+
+function Box(props) {
+  const mesh = useRef(null);
+  const [hovered, setHover] = useState(false);
+  const [active, setActive] = useState(false);
+  useFrame((state, delta) => (mesh.current.rotation.x += delta));
+  return (
+    <mesh
+      {...props}
+      ref={mesh}
+      scale={active ? 1.5 : 1}
+      onClick={(event) => setActive(!active)}
+      onPointerOver={(event) => setHover(true)}
+      onPointerOut={(event) => setHover(false)}
+    >
+      <boxGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial
+        color={hovered ? "yellow" : "orange"}
+        metalness={0.5}
+        roughness={0}
+      />
+    </mesh>
+  );
+}
 
 /**
  * This is the first function to be executed.
@@ -48,16 +74,30 @@ export default function App() {
         <SafeAreaProvider>
           {/* <NavigationContainer>*/}
           <TouchableRipple
-            className={`flex-1 h-full items-center justify-center bg-${color}-400`}
+            className={`flex-1 bg-${color}-400`}
             onPress={() => {
               let random = Math.floor(Math.random() * colorSelection.length);
               setColor(colorSelection[random]);
             }}
           >
-            <Text className="text-center mx-3">
-              Insert Your NavigatorContainer and Preferred Navigator here.
-              Color: {color}
-            </Text>
+            <View className="flex-1 items-center justify-center">
+              <View className="flex-1 self-stretch bg-blue-900 justify-center items-center">
+                <Text className="text-center font-bold mx-10 text-lg text-white">
+                  Insert Your NavigatorContainer and Preferred Navigator here.
+                </Text>
+              </View>
+
+              <Canvas
+                style={{
+                  backgroundColor: "black",
+                  alignSelf: "stretch",
+                }}
+              >
+                <ambientLight />
+                <pointLight position={[10, 10, 10]} intensity={600} />
+                <Box position={[0, 0, 0]} />
+              </Canvas>
+            </View>
           </TouchableRipple>
 
           {/*</NavigationContainer> */}
